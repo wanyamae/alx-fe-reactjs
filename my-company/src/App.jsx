@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: 'Arial, sans-serif' }}>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
+    </div>
   );
 }
 
