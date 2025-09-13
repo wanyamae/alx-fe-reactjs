@@ -15,3 +15,5 @@ const RecipeDetails = ({ recipes }) => {
     </div>
   );
 };
+
+export default RecipeDetails;
