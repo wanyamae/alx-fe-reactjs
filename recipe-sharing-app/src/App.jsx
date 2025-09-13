@@ -4,7 +4,7 @@ import RecipeDetails from './components/RecipeDetails';
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
 import FavoritesList from './components/FavoritesList';
-import RecommendationsList from './components/RecommednationsList';
+import RecommendationsList from './components/RecommednationList';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
