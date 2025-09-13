@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useRecipeStore } from './recipeStore';
 
 const RecipeList = () => {
@@ -43,7 +44,11 @@ const RecipeList = () => {
                 ) : (
                     filteredRecipes.map(recipe => (
                         <div key={recipe.id} className="border-b py-4 last:border-b-0">
-                            <h3 className="text-lg font-semibold">{recipe.title}</h3>
+                            <h3 className="text-lg font-semibold">
+                                <Link to={`/recipes/${recipe.id}`} className="text-blue-600 hover:underline">
+                                    {recipe.title}
+                                </Link>
+                            </h3>
                             <p className="text-gray-700">{recipe.description}</p>
                         </div>
                     ))
