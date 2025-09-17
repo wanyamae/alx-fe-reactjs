@@ -40,7 +40,7 @@ return (
                 {loading ? "Searching..." : "Search"}
             </button>
         </form>
-        {error && <div>User not found.</div>}
+        {error && <div className="error-message">Looks like we cant find the user.</div>}
         {user && (
         <div className="user-card">
             <img src={user.avatar_url} alt={user.login} width={80} />

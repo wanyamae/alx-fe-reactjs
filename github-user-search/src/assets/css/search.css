@@ -85,3 +85,12 @@ p {
   width: 100%;
   display: block;
 }
+
+.error-message {
+  color: #cf222e;
+  text-align: center;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: wavy underline;
+}
