@@ -6,3 +6,9 @@ function fetchUserData(username) {
 }
 
 export { fetchUserData };
+
+function advancedUserSearch(query) {
+    return axios.get(`https://api.github.com/search/users?q=${encodeURIComponent(query)}`);
+}
+
+export { advancedUserSearch };
