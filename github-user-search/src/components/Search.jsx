@@ -22,11 +22,7 @@ const handleSubmit = async (e) => {
     setUsers([]);
     try {
         if (showAdvanced) {
-            let query = '';
-            if (username) query += `${username} `;
-            if (location) query += `location:${location} `;
-            if (minRepos) query += `repos:>=${minRepos}`;
-            const response = await advancedUserSearch(query.trim());
+            const response = await advancedUserSearch({ username, location, minRepos });
             setUsers(response.data.items);
         } else {
             const response = await fetchUserData(username);
