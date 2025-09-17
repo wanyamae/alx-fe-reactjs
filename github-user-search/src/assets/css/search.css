@@ -1,0 +1,87 @@
+.search-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(27,31,35,0.04);
+}
+
+.search-container form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-container input[type="text"] {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.search-container button {
+  padding: 0.5rem 1rem;
+  background: #2da44e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-container button:hover {
+  background: #218639;
+}
+
+.user-card > div,
+.user-card > h2,
+.user-card > a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid #d0d7de;
+  text-align: center;
+}
+
+.user-card img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid #d0d7de;
+}
+
+.user-card h2 {
+  margin: 0;
+  display: block;
+  font-size: 1.25rem;
+  color: #24292f;
+  text-align: center;
+}
+
+.user-card a {
+  color: #0969da;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.user-card a:hover {
+  text-decoration: underline;
+}
+
+p {
+  color: #57606a;
+  font-size: 0.98rem;
+}
+
+.centered-heading {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
