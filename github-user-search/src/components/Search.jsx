@@ -1,7 +1,7 @@
 import { fetchUserData } from "../services/githubService";
 import { advancedUserSearch } from "../services/githubService";
 import React, { useState } from 'react';
-import '../assets/css/Search.css';
+import '../assets/css/search.css';
 
 export default function Search() {
 
