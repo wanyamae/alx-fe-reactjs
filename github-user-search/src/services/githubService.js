@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 function buildUserSearchQuery({ username, location, minRepos }) {
   let query = '';
   if (username) query += `${username} `;
@@ -10,11 +12,11 @@ function buildUserSearchQuery({ username, location, minRepos }) {
 
 export function advancedUserSearch({ username, location, minRepos }) {
   const query = buildUserSearchQuery({ username, location, minRepos });
-  return axios.get(`https://api.github.com/search/users?q=${encodeURIComponent(query)}`);
+  return axios.get(`${API_URL}/search/users?q=${encodeURIComponent(query)}`);
 }
 
 function fetchUserData(username) {
-  return axios.get(`https://api.github.com/users/${username}`);
+  return axios.get(`${API_URL}/users/${username}`);
 }
 
 export { fetchUserData };
