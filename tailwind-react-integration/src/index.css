@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+
+div.user-profile {
+  @apply bg-gray-100 p-8 max-w-sm mx-auto my-20 rounded-lg shadow-lg;
+}
+
+img {
+  @apply rounded-full w-36 h-36 mx-auto;
+}
+
+h1 {
+  @apply text-xl text-blue-800 my-4;
+}
+
+p {
+  @apply text-gray-600 text-base;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -30,11 +47,6 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {
