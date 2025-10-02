@@ -17,7 +17,7 @@ function HomePage() {
                     Our Recipes
                     <span className="block w-16 h-1 bg-red-600 mx-auto mt-2 rounded"></span>
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-6 gap-6">
                     {recipes.map((recipe, idx) => {
                         // Assign random card size classes for variety
                         const cardSizes = [
