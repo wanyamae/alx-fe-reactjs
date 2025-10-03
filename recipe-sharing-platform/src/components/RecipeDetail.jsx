@@ -1,4 +1,5 @@
 
+
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
@@ -12,6 +13,8 @@ function RecipeDetail() {
         fetch('/data.json')
             .then(response => response.json())
             .then(data => {
+                // Debug: log id and data
+                // console.log('RecipeDetail id:', id, 'data:', data);
                 const foundRecipe = data.find(item => String(item.id) === String(id));
                 setRecipe(foundRecipe);
                 setLoading(false);
@@ -61,27 +64,32 @@ function RecipeDetail() {
                 <div className="flex-1">
                     <h1 className="text-3xl font-bold text-gray-800 mb-2">{recipe.title}</h1>
                     <p className="text-gray-600 mb-4 text-lg">{recipe.summary}</p>
-                    {/* Example: ingredients and steps, if available */}
-                    {recipe.ingredients && (
-                        <div className="mb-4">
-                            <h2 className="text-xl font-semibold text-gray-700 mb-2">Ingredients</h2>
-                            <ul className="list-disc list-inside text-gray-600">
-                                {recipe.ingredients.map((ing, idx) => (
+
+                    {/* Ingredients Section */}
+                    <div className="mb-6">
+                        <h2 className="text-xl font-semibold text-gray-700 mb-2">Ingredients</h2>
+                        <ul className="list-disc list-inside text-gray-600 bg-gray-50 rounded p-4">
+                            {(recipe.ingredients && recipe.ingredients.length > 0)
+                                ? recipe.ingredients.map((ing, idx) => (
                                     <li key={idx}>{ing}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
-                    {recipe.steps && (
-                        <div>
-                            <h2 className="text-xl font-semibold text-gray-700 mb-2">Steps</h2>
-                            <ol className="list-decimal list-inside text-gray-600">
-                                {recipe.steps.map((step, idx) => (
+                                ))
+                                : <li>No ingredients listed.</li>
+                            }
+                        </ul>
+                    </div>
+
+                    {/* Steps Section */}
+                    <div>
+                        <h2 className="text-xl font-semibold text-gray-700 mb-2">Cooking Instructions</h2>
+                        <ol className="list-decimal list-inside text-gray-600 bg-gray-50 rounded p-4">
+                            {(recipe.steps && recipe.steps.length > 0)
+                                ? recipe.steps.map((step, idx) => (
                                     <li key={idx}>{step}</li>
-                                ))}
-                            </ol>
-                        </div>
-                    )}
+                                ))
+                                : <li>No instructions provided.</li>
+                            }
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
