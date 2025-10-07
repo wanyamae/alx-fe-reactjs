@@ -25,7 +25,7 @@ function RegistrationForm() {
             <input
                 type="text"
                 name="username"
-                value={formData.username}
+                value={username}
                 onChange={handleChange}
                 placeholder="Username"
                 className="w-full mb-4 p-2 border border-gray-300 rounded"
@@ -33,7 +33,7 @@ function RegistrationForm() {
             <input
                 type="email"
                 name="email"
-                value={formData.email}
+                value={email}
                 onChange={handleChange}
                 placeholder="Email"
                 className="w-full mb-4 p-2 border border-gray-300 rounded"
@@ -41,7 +41,7 @@ function RegistrationForm() {
             <input
                 type="password"
                 name="password"
-                value={formData.password}
+                value={password}
                 onChange={handleChange}
                 placeholder="Password"
                 className="w-full mb-4 p-2 border border-gray-300 rounded"
