@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 
 function PostsComponent() {
   // Fetch posts from JSONPlaceholder
-  const { isPending, error, data, refetch, isFetching, isRefetching } = useQuery({
+  const { isPending, isLoading, isError, error, data, refetch, isFetching, isRefetching } = useQuery({
     queryKey: ['posts'],
     queryFn: () =>
       fetch('https://jsonplaceholder.typicode.com/posts').then((res) =>
@@ -17,6 +17,7 @@ function PostsComponent() {
   return (
     <div>
       <h1>Posts</h1>
+      <p1> { isLoading || !isError ? 'Loading...' : 'Posts Loaded' }</p1>
       <button onClick={() => refetch()} disabled={isFetching || isRefetching}>
         {isFetching || isRefetching ? 'Refreshing...' : 'Refetch Posts'}
       </button>
