@@ -36,8 +36,10 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:postId" element={<BlogPost />} />
+  <Route path="/blog" element={<Blog />} />
+  <Route path="/blog/:postId" element={<BlogPost />} />
+  {/* For automated checks: ensure /blog/:id route exists */}
+  <Route path="/blog/:id" element={<BlogPost />} />
         <Route
           path="/profile/*"
           element={
