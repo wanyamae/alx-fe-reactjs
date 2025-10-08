@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 function PostsComponent() {
   // Fetch posts from JSONPlaceholder
   const { isPending, isLoading, isError, error, data, refetch, isFetching, isRefetching } = useQuery({
-    queryKey: ['posts'],
+    queryKey: ['fetchPosts'],
     queryFn: () =>
       fetch('https://jsonplaceholder.typicode.com/posts').then((res) =>
         res.json(),
