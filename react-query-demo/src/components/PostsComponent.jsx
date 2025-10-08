@@ -9,6 +9,9 @@ function PostsComponent() {
         res.json(),
       ),
     staleTime: 60000, // 1 minute for demo
+    cacheTime: 300000, // 5 minutes cache
+    refetchOnWindowFocus: true, // refetch when window regains focus
+    keepPreviousData: true, // keep previous data while fetching new
   });
 
   if (isPending) return <div>Loading...</div>;
