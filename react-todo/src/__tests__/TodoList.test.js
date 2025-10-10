@@ -1,6 +1,8 @@
+/* eslint-env jest */
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import TodoList from '../components/TodoList';
+import '@testing-library/jest-dom';
 
 describe('TodoList Component', () => {
   test('renders initial todos', () => {
@@ -32,7 +34,7 @@ describe('TodoList Component', () => {
   test('deletes a todo', () => {
     render(<TodoList />);
     const todoItem = screen.getByText('Build a Todo App');
-    const deleteButton = screen.getByTestId(/delete-todo/i);
+    const deleteButton = screen.getByTestId('delete-todo-2');
     fireEvent.click(deleteButton);
     expect(todoItem).not.toBeInTheDocument();
   });
